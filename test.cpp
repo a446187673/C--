@@ -3,7 +3,7 @@
 #include<queue>
 #include<string>
 #include<algorithm>
-
+#include<unordered_map>
 using namespace std;
 
 class Solution {
@@ -39,13 +39,15 @@ public:
         return -1;
     }
 };
-int main()
-{
-    Solution s1;
-    string start = "AACCGGTT";
-    string end = "AACCGGTA";
-    vector<string> bank{"AACCGGTA"};
-    cout<<s1.minMutation(start,end,bank);
-
-    system("Pause");
-}
+    int main()
+    {
+        unordered_map<int, int> hashmap;
+        hashmap.emplace(1, 0);
+        hashmap.emplace(2, 0);
+        auto it = hashmap.begin();
+        for (; it != hashmap.end();it++)
+        {
+            cout << it->first << "  " << it->second << endl;
+        }
+        system("Pause");
+    }
