@@ -41,13 +41,9 @@ public:
 };
     int main()
     {
-        unordered_map<int, int> hashmap;
-        hashmap.emplace(1, 0);
-        hashmap.emplace(2, 0);
-        auto it = hashmap.begin();
-        for (; it != hashmap.end();it++)
-        {
-            cout << it->first << "  " << it->second << endl;
-        }
+        int state = 3;
+        int a = 1<<0;
+        int b = 5 & 3;
+        cout<<b<<endl;
         system("Pause");
     }
