@@ -21,6 +21,7 @@ public:
             q.pop();
             for (auto s: stickers) { //依次遍历每个贴纸单词
                 int state = begin; //每次都继承上次的state，保证target的每个字母都只被找到一次
+
                 vector<int> cnt(26);
                 for (auto c: s) {
                     cnt[c-'a']++; //比较字母
@@ -31,6 +32,7 @@ public:
                         cnt[target[i]-'a']--; //避免重复寻找
                     }
                 }
+                
                 if (dp[state] || state == 0) continue; //没找到就跳过计算该贴纸
                 q.push(state); //在队列中更新每取完一个贴纸后的状态
                 dp[state] = dp[begin] + 1;//需要的总贴纸数加1
