@@ -5,7 +5,7 @@
 
 using namespace std;
 //416. 分割等和子集 https://leetcode.cn/problems/partition-equal-subset-sum/
-//
+//思路 01背包 动态规划 
 class Solution {
 public:
     bool canPartition(vector<int>& nums) {
