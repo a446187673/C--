@@ -12,11 +12,13 @@ public:
         vector<int> dp (amount+1,0);
         dp[0]= 1;
         int res = 0;
+        
         for (int i = 0; i < coins.size(); i++)
         {
             for (int j = coins[i]; j <= amount; j++)
             {
-                dp[j] += dp[j-coins[i]];
+                if(j-coins[i] >= 0)
+                    dp[j] += dp[j-coins[i]];
             }
             for(int i :dp)
                 cout<<i<<" ";
@@ -29,7 +31,7 @@ public:
 int main()
 {
      Solution s1;
-     vector<int> vec{2,1};
-     cout<<s1.change(5,vec);
+     vector<int> vec{1,5};
+     cout<<s1.change(6,vec);
     system("Pause");
 }
