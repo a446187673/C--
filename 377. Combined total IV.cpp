@@ -12,9 +12,9 @@ public:
         vector<int> dp (target+1,0);
         dp[0]= 1;
         int res = 0;
-        for (int i = 0 ; i <= target; i++)
+        for (int i = 0 ; i <= target; i++) //遍历背包
         {
-            for (int j = 0 ; j < nums.size(); j++)
+            for (int j = 0 ; j < nums.size(); j++) //遍历物品
             {
                 if(i-nums[j] >= 0)
                     dp[i] += dp[i-nums[j]];
