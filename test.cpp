@@ -41,13 +41,15 @@ public:
 };
     int main()
     {
-    unordered_map<int, int> hashmap;
-    hashmap.emplace(1, 0); //当哈希表中没有该key的时候才会添加
-    hashmap.emplace(2, 0); //可以在括号内直接输入需要的两个元素的值
-    auto it = hashmap.begin();
-    for (; it != hashmap.end(); it++)
-    {
-        cout << it->first << " " << it->second << ",";
-    }
+        string s1 = "101";
+        cout<<stoi(s1);
+    // unordered_map<int, int> hashmap;
+    // hashmap.emplace(1, 0); //当哈希表中没有该key的时候才会添加
+    // hashmap.emplace(2, 0); //可以在括号内直接输入需要的两个元素的值
+    // auto it = hashmap.begin();
+    // for (; it != hashmap.end(); it++)
+    // {
+    //     cout << it->first << " " << it->second << ",";
+    // }
     system("pause");
     }
