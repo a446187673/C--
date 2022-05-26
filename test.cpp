@@ -41,8 +41,8 @@ public:
 };
     int main()
     {
-        string s1 = "101";
-        cout<<stoi(s1);
+        int s1 = 2%3;
+        cout<<s1;
     // unordered_map<int, int> hashmap;
     // hashmap.emplace(1, 0); //当哈希表中没有该key的时候才会添加
     // hashmap.emplace(2, 0); //可以在括号内直接输入需要的两个元素的值
