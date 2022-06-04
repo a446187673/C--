@@ -6,57 +6,23 @@
 #include<unordered_map>
 using namespace std;
 
-class Solution {
+class abb
+{
 public:
-    int minMutation(string start, string end, vector<string>& bank) {
-        queue<string> q;
-        const int N = start.size();
-        q.push(start);
-        int step = 0;
-        while (!q.empty()) {
-            int size = q.size();
-            for (int s = 0; s < size; s++) {
-                auto cur = q.front(); q.pop();
-                if (cur == end) {
-                    return step;
-                }
-                for (int i = 0; i < N; i++) {
-                    for (char n : {'A', 'C', 'G', 'T'}) {
-                        string next = cur.substr(0, i) + n + cur.substr(i + 1);
-                        if (next == cur) continue;
-                        for (auto it = bank.begin(); it < bank.end(); ++it) {
-                            if (*it == next) {
-                                q.push(next);
-                                bank.erase(it);
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
-            step += 1;
-        }
-        return -1;
+    int width;
+    int height;
+    abb(int a,int b):width(a),height(b)
+    {
+
     }
+};
+template <typename T> struct Vec2 {
+    T x,y;
+     Vec2<T>() : x(T()), y(T()) {}
 };
     int main()
     {
-    // //创建zbuffer，大小为画布大小
-    // float *zbuffer = new float[800];
-    // //初始化zbuffer，设定一个很小的值
-    // for (int i=800; i--; zbuffer[i] = -std::numeric_limits<float>::max());
-    // for (int i = 0; i < 800; i++)
-    // {
-    //     cout<<i<<"  ";
-    // }
-    cout<<std::numeric_limits<float>::max();
-    // unordered_map<int, int> hashmap;
-    // hashmap.emplace(1, 0); //当哈希表中没有该key的时候才会添加
-    // hashmap.emplace(2, 0); //可以在括号内直接输入需要的两个元素的值
-    // auto it = hashmap.begin();
-    // for (; it != hashmap.end(); it++)
-    // {
-    //     cout << it->first << " " << it->second << ",";
-    // }
-    system("pause");
+        Vec2<float> n;
+        cout<<n.x<<" "<<n.y;
+        system("Pause");
     }
