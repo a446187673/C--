@@ -5,24 +5,17 @@
 #include<algorithm>
 #include<unordered_map>
 using namespace std;
-
-class abb
+float *abb = NULL;
+void solution(float* abb)
 {
-public:
-    int width;
-    int height;
-    abb(int a,int b):width(a),height(b)
-    {
-
-    }
-};
-template <typename T> struct Vec2 {
-    T x,y;
-     Vec2<T>() : x(T()), y(T()) {}
-};
+    abb[2] = 123;
+}
     int main()
     {
-        Vec2<float> n;
-        cout<<n.x<<" "<<n.y;
+        
+        abb = new float[1000];
+        solution(abb);
+        abb[1] = 2026;
+        cout<<abb[2];
         system("Pause");
     }

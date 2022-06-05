@@ -5,6 +5,7 @@
 
 using namespace std;
 //6. Z 字形变换 https://leetcode.cn/problems/zigzag-conversion/
+//字符串
 class Solution {
 public:
     string convert(string s, int numRows) {
