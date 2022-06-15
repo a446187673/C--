@@ -12,10 +12,10 @@ void solution(float* abb)
 }
     int main()
     {
-        
-        abb = new float[1000];
-        solution(abb);
-        abb[1] = 2026;
-        cout<<abb[2];
+        unordered_map<int, int> cnt;
+        cnt.emplace(9,9292);
+        for (auto [_, freq] : cnt) {
+            cout<<freq;
+        }
         system("Pause");
     }

@@ -21,7 +21,7 @@ public:
         return res;
     }
 };
-//动态回规划
+//动态规划
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {

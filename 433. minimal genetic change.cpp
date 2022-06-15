@@ -5,7 +5,7 @@
 #include<algorithm>
 
 using namespace std;
-//题目链接//https://leetcode-cn.com/problems/minimum-genetic-mutation/
+//433. 最小基因变化  https://leetcode-cn.com/problems/minimum-genetic-mutation/
 //题解 https://leetcode-cn.com/problems/minimum-genetic-mutation/solution/by-fuxuemingzhu-t1mv/
 //BFS 广度优先搜索
 //每一轮改变字母，变换成与bank中匹配的序列，就相当于生成了一层子节点
